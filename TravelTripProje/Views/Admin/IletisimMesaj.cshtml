@@ -1,0 +1,31 @@
+﻿@model List<TravelTripProje.Models.Siniflar.Iletisim>
+@{
+    ViewBag.Title = "IletisimMesaj";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Gelen Mesajlar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Konu</th>
+            <th>Mesaj</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.AdSoyad</td>
+                <td>@item.Mail</td>
+                <td>@item.Konu</td>
+                <td>@item.Mesaj</td>
+                <td><a href="/Admin/MesajSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

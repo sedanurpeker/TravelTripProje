@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff00cc, #3333ff); /* Gradient arka plan */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+    .login-container h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+    }
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+    .input-group input {
+        width: 100%;
+        padding: 10px 10px 10px 40px; /* Ýkon için sol padding */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f5f5f5;
+    }
+
+        /* Email input için zarf ikonu */
+        .input-group input[type="email"] {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114V5.383zm-1.146 6.73L9.242 8.757 8 9.528l-1.242-.771-4.612 2.356a1 1 0 0 0 1.146.924h10a1 1 0 0 0 .548-.157zM1 5.383v5.73l4.758-2.855L1 5.383z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 16px;
+        }
+
+        /* Password input için kilit ikonu */
+        .input-group input[type="password"] {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 16px;
+        }
+
+.checkbox-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .checkbox-group input {
+        margin-right: 10px;
+    }
+
+    .checkbox-group label {
+        font-size: 14px;
+        color: #666;
+    }
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff00cc; /* Pembe buton */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .login-btn:hover {
+        background-color: #e600b3;
+    }
+
+.social-login {
+    margin-top: 20px;
+}
+
+    .social-login p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+.social-btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+    background-color: #f5f5f5;
+}
+
+    .social-btn.facebook {
+        color: #3b5998;
+    }
+
+    .social-btn.google {
+        color: #db4437;
+    }
+
+    .social-btn:hover {
+        background-color: #e0e0e0;
+    }
+    .social-btn i {
+        margin-right: 5px;
+    }
