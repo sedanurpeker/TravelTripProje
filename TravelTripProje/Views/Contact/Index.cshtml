@@ -10,38 +10,219 @@
             <h3>İletişim Bilgileri</h3>
             <p>Buradan bana ulaşabilirsiniz. Lütfen iletişim halinde olmaktan çekinmeyin.</p>
         </div>
-        <div class="form">
-            <form class="cmxform" id="contactForm" method="post" action="/Contact/SendMessage">
-                <div>
-                    <input type="text" name="AdSoyad" class="textbox" value="@(Model?.AdSoyad ?? "Ad Soyad")" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ad Soyad';}" />
-                </div>
-                <div>
-                    <input type="email" name="Mail" class="textbox" value="@(Model?.Mail ?? "Mail")" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}" />
-                </div>
-                <div>
-                    <input type="text" name="Konu" class="textbox" value="@(Model?.Konu ?? "Konu")" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Konu';}" />
-                </div>
-                <div>
-                    <textarea name="Mesaj" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mesaj';}">@(Model?.Mesaj ?? "Mesaj")</textarea>
-                </div>
-                <div>
-                    <button type="submit" class="read">Gönder</button>
-                </div>
-            </form>
-        </div>
-        <div class="contact-bottom">
-            <div class="contact-left">
-                <div class="contact-add">
-                    <h3>Bilgilerim</h3>
-                    <p>Telefon: +90 554-7832157</p>
-                    <p>Mail: <a href="mailto:signup@gmail.com">sedanurpeker@gmail.com</a></p>
-                </div>
+        <div class="contact-section">
+            <div class="form">
+                <form class="cmxform" id="contactForm" method="post" action="/Contact/SendMessage">
+                    <div class="input-group">
+                        <label for="AdSoyad">Ad Soyad</label>
+                        <input type="text" id="AdSoyad" name="AdSoyad" class="textbox" value="@(Model?.AdSoyad ?? "")" placeholder="Ad Soyad" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
+                    </div>
+                    <div class="input-group">
+                        <label for="Mail">Mail</label>
+                        <input type="email" id="Mail" name="Mail" class="textbox" value="@(Model?.Mail ?? "")" placeholder="Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
+                    </div>
+                    <div class="input-group">
+                        <label for="Konu">Konu</label>
+                        <input type="text" id="Konu" name="Konu" class="textbox" value="@(Model?.Konu ?? "")" placeholder="Konu" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" />
+                    </div>
+                    <div class="input-group">
+                        <label for="Mesaj">Mesaj</label>
+                        <textarea id="Mesaj" name="Mesaj" placeholder="Mesaj" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">@(Model?.Mesaj ?? "")</textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="read">Gönder</button>
+                    </div>
+                </form>
             </div>
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.4567891234567!2d-121.922369!3d37.768294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f8e8f8e8f8e8f%3A0x8f8f8e8f8e8f8e8f!2sRashelle+Way%2C+San+Ramon%2C+CA+94582%2C+USA!5e0!3m2!1sen!2str!4v1630000000000" width="580" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <small><a href="https://maps.google.com/maps?q=Rashelle+Way,+San+Ramon,+CA,+United+States" style="color: #555;text-align:left;"><br /><ins>Haritayı Görüntüle</ins><br /><br /></a></small>
+            <div class="contact-bottom">
+                <div class="contact-left">
+                    <div class="contact-add">
+                        <h3>Bilgilerim</h3>
+                        <p>Telefon: +90 554-7832157</p>
+                        <p>Mail: <a href="mailto:sedanurpeker@gmail.com">sedanurpeker@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.4567891234567!2d-121.922369!3d37.768294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f8e8f8e8f8e8f%3A0x8f8f8e8f8e8f8e8f!2sRashelle+Way%2C+San+Ramon%2C+CA+94582%2C+USA!5e0!3m2!1sen!2str!4v1630000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <small><a href="https://maps.google.com/maps?q=Rashelle+Way,+San+Ramon,+CA,+United+States" style="color: #555;text-align:left;"><br /><ins>Haritayı Görüntüle</ins><br /><br /></a></small>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
         </div>
     </div>
 </div>
+
+<style>
+    .contact {
+        padding: 40px 0;
+        background-color: #f5f5f5;
+    }
+
+    .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .contact-top {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .contact-top h3 {
+            font-size: 28px;
+            color: rgb(155, 45, 82);
+            margin-bottom: 10px;
+        }
+
+        .contact-top p {
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+        }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .form {
+        flex: 1;
+        min-width: 300px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f5f5f5;
+            transition: border-color 0.3s;
+        }
+
+            .input-group input:focus,
+            .input-group textarea:focus {
+                border-color: #6b2d5c;
+                outline: none;
+            }
+
+        .input-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+    .read {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #9b2d52, #d45c92);
+        border: none;
+        border-radius: 25px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(155, 45, 82, 0.3);
+    }
+
+        .read:hover {
+            background: linear-gradient(135deg, #d45c92, #9b2d52);
+            transform: scale(1.05);
+            box-shadow: 0 6px 14px rgba(155, 45, 82, 0.4);
+        }
+
+
+    .contact-bottom {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .contact-left {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .contact-add h3 {
+        font-size: 20px;
+        color: rgb(155, 45, 82);
+        margin-bottom: 10px;
+    }
+
+    .contact-add p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .contact-add a {
+        color: #6b2d5c;
+        text-decoration: none;
+    }
+
+        .contact-add a:hover {
+            text-decoration: underline;
+        }
+
+    .contact-map {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .contact-map iframe {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .contact-map small {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .contact-map a {
+            color: #555;
+            text-decoration: none;
+        }
+
+            .contact-map a:hover {
+                text-decoration: underline;
+            }
+
+    .clear {
+        clear: both;
+    }
+
+    @@media (max-width: 768px) {
+        .contact-section {
+            flex-direction: column;
+        }
+
+        .form,
+        .contact-bottom {
+            flex: 1;
+            min-width: 100%;
+        }
+    }
+</style>

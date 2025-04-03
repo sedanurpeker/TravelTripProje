@@ -58,12 +58,14 @@
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>SON POSTLAR</h3>
-                    <ul>
-                        <li><a href="/Blog/BlogDetay/11">Kaya Oymacılığının Başyapıtı: Kral Kaya Mezarları</a></li>
-                        <li><a href="/Blog/BlogDetay/10">Kayalara Gömülü Tarih: Yedi Uyurlar Mağarası'nın İzinde</a></li>
-                        <li><a href="/Blog/BlogDetay/9">Doğanın Şiiri: Fırtına Deresi'nin Eşsiz Güzelliği</a></li>
-                    </ul>
+                    @foreach (var y in Model.Deger3)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
+                        </ul>
+                    }
                 </div>
+
 
             </div>
             <div class="clearfix"></div>
