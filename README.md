@@ -2,9 +2,6 @@
 
 **TravelTripProje**, kullanıcıların seyahat deneyimlerini paylaşabilecekleri, blog yazıları yazabilecekleri ve yorum yapabilecekleri bir web uygulamasıdır. Bu proje, **ASP.NET MVC** framework'ü kullanılarak geliştirilmiştir ve bir **admin paneli** ile **blog yönetimi, yorum yönetimi ve iletişim mesajlarını görüntüleme** gibi özellikler sunar. Seyahat tutkunları için tasarlanmış bu platform, kullanıcı dostu bir arayüze sahiptir.
 
-## 📸 Ekran Görüntüleri
-
-
 ## 🚀 Özellikler
 
 - **Blog Yönetimi**: Admin paneli üzerinden blog yazıları ekleyebilir, güncelleyebilir ve silebilirsiniz.
