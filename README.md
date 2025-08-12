@@ -59,5 +59,3 @@ Projenin temel dosyaları ve klasörleri:
   ```bash
   Kullanıcı Adı: admin  
   Şifre: admin
-
-
