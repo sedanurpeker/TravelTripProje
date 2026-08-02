@@ -1,61 +1,71 @@
-# TravelTripProje
+# ✈️ Travel Blog Platform
 
-**TravelTripProje**, kullanıcıların seyahat deneyimlerini paylaşabilecekleri, blog yazıları yazabilecekleri ve yorum yapabilecekleri bir web uygulamasıdır. Bu proje, **ASP.NET MVC** framework'ü kullanılarak geliştirilmiştir ve bir **admin paneli** ile **blog yönetimi, yorum yönetimi ve iletişim mesajlarını görüntüleme** gibi özellikler sunar. Seyahat tutkunları için tasarlanmış bu platform, kullanıcı dostu bir arayüze sahiptir.
+[![ASP.NET MVC](https://img.shields.io/badge/ASP.NET_MVC-C%23-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?logo=microsoft-sql-server&logoColor=white)](https://www.microsoft.com/en-us/sql-server)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Özellikler
+A web application where users can share their travel experiences, write blog posts, and leave comments.
+Built with the ASP.NET MVC framework, it includes an admin panel for managing blog posts, comments, and contact messages. Designed for travel enthusiasts, the platform features a clean, user-friendly interface.
 
-- **Blog Yönetimi**: Admin paneli üzerinden blog yazıları ekleyebilir, güncelleyebilir ve silebilirsiniz.
-- **Yorum Yönetimi**: Kullanıcı yorumlarını listeleyebilir, düzenleyebilir ve silebilirsiniz.
-- **İletişim Mesajları**: Kullanıcıların gönderdiği iletişim mesajlarını görüntüleyebilir ve silebilirsiniz.
-- **Kimlik Doğrulama**: Güvenli bir login sistemi ile admin paneline erişim sağlanır.
-- **Kullanıcı Dostu Arayüz**: Modern ve şık bir tasarım ile kullanıcı deneyimi ön planda tutulmuştur.
+## 📑 Table of Contents
 
-## Teknolojiler
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
 
-- **Backend**: ASP.NET MVC (C#)
-- **Veritabanı**: Microsoft SQL Server
-- **Frontend**: HTML, CSS, JavaScript
-- **Kimlik Doğrulama**: Forms Authentication
-- **Diğer**: Google Maps API
+## ✨ Features
 
-## Proje Yapısı
+- **Blog Management:** Add, update, and delete blog posts through the admin panel.
+- **Comment Management:** List, edit, and delete user comments.
+- **Contact Messages:** View and delete messages submitted by users.
+- **Authentication:** Secure login system protecting access to the admin panel.
+- **User-Friendly Interface:** A modern, clean design focused on user experience.
 
-Projenin temel dosyaları ve klasörleri:
+## 🛠 Tech Stack
+
+| Category | Technology |
+|---|---|
+| **Backend** | ASP.NET MVC (C#) |
+| **Database** | Microsoft SQL Server |
+| **Frontend** | HTML, CSS, JavaScript |
+| **Authentication** | Forms Authentication |
+| **Other** | Google Maps API |
+
+## 📂 Project Structure
 
 ```
-📂 Controllers
- ┣  AboutController.cs        # Hakkında sayfasını yönetir.
- ┣  AdminController.cs        # Blog, yorum ve iletişim mesajlarını yönetmek için admin paneli işlemleri.
- ┣  BlogController.cs         # Blog yazılarının listelenmesi ve detaylarının gösterilmesi.
- ┣  ContactController.cs      # İletişim sayfasını ve mesajları yönetir.
- ┣  GirisYapController.cs     # Login ve logout işlemleri.
- ┗  DefaultController.cs      # Ana sayfa ve diğer statik sayfalar.
-
-📂 Views
- ┣ 📂 Admin/                   # Admin paneli için view'lar (blog listesi, yorum listesi, vb.).
- ┣ 📂 Blog/                    # Blog yazıları ve yorumlar için view'lar.
- ┣  GirisYap/Login.cshtml    # Login sayfası.
- ┗ 📂 Default/                 # Ana sayfa ve diğer statik sayfalar.
-
-📂 Models                      # Veritabanı modelleri (Blog, Yorumlar, Iletisim, vb.).
- web.config                  # Veritabanı bağlantı string'i ve Forms Authentication ayarları.
+travel-blog-aspnet-mvc/
+├── Controllers/
+│   ├── AboutController.cs      → Manages the About page
+│   ├── AdminController.cs      → Admin panel operations for blogs, comments, and contact messages
+│   ├── BlogController.cs       → Lists blog posts and displays post details
+│   ├── ContactController.cs    → Manages the contact page and messages
+│   ├── LoginController.cs      → Login and logout operations
+│   └── DefaultController.cs    → Home page and other static pages
+│
+├── Views/
+│   ├── Admin/                  → Views for the admin panel (blog list, comment list, etc.)
+│   ├── Blog/                   → Views for blog posts and comments
+│   ├── Login/Login.cshtml      → Login page
+│   └── Default/                → Home page and other static pages
+│
+├── Models/                     → Database models (Blog, Comments, Contact, etc.)
+└── web.config                  → Database connection string and Forms Authentication settings
 ```
 
----
+## 🚀 Getting Started
 
-## Kurulum
+1. Clone the repository:
 
-1. **Projeyi klonlayın**
-   ```bash
-   git clone https://github.com/kullanici-adi/TravelTripProje.git
-2. Veritabanını oluşturun
-- Microsoft SQL Server üzerinde TravelTripDB adında bir veritabanı oluşturun.
-- web.config içindeki connection string bölümünü kendi ayarlarınıza göre düzenleyin.
-3. Projeyi çalıştırın
-- Visual Studio üzerinden projeyi açın.
-- IIS Express veya kendi sunucunuz ile çalıştırın.
-4. Admin giriş bilgileri
-- Varsayılan admin kullanıcı:
-  ```bash
-  Kullanıcı Adı: admin  
-  Şifre: admin
+```bash
+git clone https://github.com/sedanurpeker/travel-blog-aspnet-mvc.git
+```
+
+2. Set up the database:
+   - Create a database named `TravelTripDB` on Microsoft SQL Server.
+   - Update the connection string in `web.config` with your own settings.
+
+3. Run the project:
+   - Open the project in Visual Studio.
+   - Run it with IIS Express or your own server.
